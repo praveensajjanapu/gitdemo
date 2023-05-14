@@ -1,0 +1,9 @@
+---
+- name: install haproxy
+  apt:
+    name: haproxy
+    state: latest
+- name: restart haproxy
+  systemcd:
+     name: haproxy 
+     state: restarted
